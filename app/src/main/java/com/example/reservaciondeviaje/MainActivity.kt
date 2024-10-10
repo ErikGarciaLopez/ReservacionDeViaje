@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.reservaciondeviaje.databinding.ActivityMainBinding
@@ -83,6 +84,9 @@ class MainActivity : AppCompatActivity() {
         //Asiento
         // TODO: Asientos
 
+        //NUmero de viajero
+        // TODO: Num viajero
+
         //Validar que esten llenos los campos
         binding.etNombre.addTextChangedListener(object : TextWatcher{
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -99,6 +103,23 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
+        binding.btnReservar.setOnClickListener {
+
+            val params = bundleOf(
+                "name" to nombre,
+                "surname" to apellido,
+                "mail" to correo,
+                "origin" to origen
+                //Destino
+                //Fecha salida
+                //Hora salida
+                //Hora salida
+                //Fecha regreso
+                //Asiento
+            )
+
+        }
 
     }
 

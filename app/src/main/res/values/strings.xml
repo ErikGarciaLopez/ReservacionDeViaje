@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ReservacionDeViaje</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="correo">Correo</string>
+    <string name="origen">Origen</string>
+    <string name="fecha_de_salida">Fecha de Salida</string>
+    <string name="fecha_de_regreso">Fecha de Regreso</string>
+    <string name="numero_de_viajero">Numero de viajero (opcional)</string>
+    <string name="reservar">Reservar</string>
 </resources>
