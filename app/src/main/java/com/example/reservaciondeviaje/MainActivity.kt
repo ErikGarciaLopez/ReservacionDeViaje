@@ -1,6 +1,7 @@
 package com.example.reservaciondeviaje
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -35,23 +36,6 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        //Nombre
-        val nombre = binding.etNombre.text.toString();
-
-        //Apellido
-        val apellido = binding.etNombre.text.toString();
-
-        //Correo
-        val correo = binding.etCorreo.text.toString();
-
-        //if (!Patterns.EMAIL_ADDRESS.matcher(correo).matches()){
-        //    Toast.makeText(this, "Correo no valido", Toast.LENGTH_SHORT).show()
-        //}
-
-        //Origen
-        val origen = binding.etOrigen.text.toString();
-
-
         //Spinner Destinos
         val destinos = arrayOf("Cancún", "Ciudad de México", "Guadalajara", "Monterrey", "Los Cabos", "Tijuana")
 
@@ -74,6 +58,12 @@ class MainActivity : AppCompatActivity() {
         spinnerAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         binding.spinnerHoraSalida.adapter = spinnerAdapter2
+
+        //Spiner HoraRegreso
+        val spinnerAdapter3 = ArrayAdapter(this, android.R.layout.simple_spinner_item, horarios)
+        spinnerAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        binding.spinnerHoraRegreso.adapter = spinnerAdapter3
 
 
         //Fecha Regreso
@@ -106,18 +96,53 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnReservar.setOnClickListener {
 
+            //Nombre
+            val nombre = binding.etNombre.text.toString()
+
+            //Apellido
+            val apellido = binding.etApellido.text.toString()
+
+            //Correo
+            val correo = binding.etCorreo.text.toString()
+
+            //if (!Patterns.EMAIL_ADDRESS.matcher(correo).matches()){
+            //    Toast.makeText(this, "Correo no valido", Toast.LENGTH_SHORT).show()
+            //}
+
+            //Origen
+            val origen = binding.etOrigen.text.toString()
+
+            //FechaSalida: global
+
+            //HoraSalida
+            val horaSalida = binding.spinnerHoraSalida.selectedItem.toString()
+
+            // Destino
+            val destinoSeleccionado = binding.spinnerDestino.selectedItem.toString()
+
+            //FechaRegreso: global
+
+            //Hora regreso
+            val horaRegreso = binding.spinnerHoraRegreso.selectedItem.toString()
+
+            //Num viajero (opcional)
+
             val params = bundleOf(
-                "name" to nombre,
-                "surname" to apellido,
-                "mail" to correo,
-                "origin" to origen
-                //Destino
-                //Fecha salida
-                //Hora salida
-                //Hora salida
-                //Fecha regreso
-                //Asiento
+                "nombre" to nombre,
+                "apellido" to apellido,
+                "correo" to correo,
+                "origen" to origen,
+                "fechaSalida" to fechaSalida,
+                "horaSalida" to horaSalida,
+                "destino" to destinoSeleccionado,
+                "fechaRegreso" to fechaRegreso,
+                "horaRegreso" to horaRegreso
+                //Num viajero (opcional)
             )
+
+            val intent = Intent(this, ConfirmationActivity::class.java)
+            intent.putExtras(params) //Mandamos el Bundle
+            startActivity(intent)
 
         }
 

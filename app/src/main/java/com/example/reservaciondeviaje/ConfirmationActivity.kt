@@ -1,6 +1,8 @@
 package com.example.reservaciondeviaje
 
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,5 +24,27 @@ class ConfirmationActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val params = intent.extras
+
+        params?.let { args ->
+            val nombre = args.getString("nombre", "")
+            val apellido = args.getString("apellido", "")
+            val correo = args.getString("correo", "")
+            val origen = args.getString("origen", "")
+            val fechaSalida = args.getString("fechaSalida", "")
+            val horaSalida = args.getString("horaSalida", "")
+            val destino = args.getString("destino", "")
+            val fechaRegreso = args.getString("fechaRegreso", "")
+            val horaRegreso = args.getString("horaRegreso", "")
+
+            Log.d("APPLOGS", "Nombre: $nombre Apellido: $apellido Correo: $correo Origen: $origen")
+            Log.d("APPLOGS", "FechaSalida: $fechaSalida HoraSalida: $horaSalida Destino: $destino")
+            Log.d("APPLOGS", "FechaRegreso: $fechaRegreso HoraRegreso: $horaRegreso")
+
+
+        }
+
+
     }
 }
