@@ -38,33 +38,25 @@ class MainActivity : AppCompatActivity() {
 
         //Spinner Destinos
         val destinos = arrayOf("Cancún", "Ciudad de México", "Guadalajara", "Monterrey", "Los Cabos", "Tijuana")
-
         val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, destinos)
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
         binding.spinnerDestino.adapter = spinnerAdapter
-
 
         //Fecha Salida
         binding.btnFechaSalida.setOnClickListener {
             mostrarDatePicker(binding.btnFechaSalida, "salida")
         }
 
-
         //Spinner HoraSalida
         val horarios = arrayOf("7:00 a.m.", "10:00 a.m.", "2:00 p.m.", "6:00 p.m.")
-
         val spinnerAdapter2 = ArrayAdapter(this, android.R.layout.simple_spinner_item, horarios)
         spinnerAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
         binding.spinnerHoraSalida.adapter = spinnerAdapter2
 
         //Spiner HoraRegreso
         val spinnerAdapter3 = ArrayAdapter(this, android.R.layout.simple_spinner_item, horarios)
         spinnerAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
         binding.spinnerHoraRegreso.adapter = spinnerAdapter3
-
 
         //Fecha Regreso
         binding.btnFechaRegreso.setOnClickListener {
@@ -117,6 +109,9 @@ class MainActivity : AppCompatActivity() {
             //HoraSalida
             val horaSalida = binding.spinnerHoraSalida.selectedItem.toString()
 
+            //AsientoIda
+            val asiendoIda = asientoAleatorio()
+
             // Destino
             val destinoSeleccionado = binding.spinnerDestino.selectedItem.toString()
 
@@ -124,6 +119,9 @@ class MainActivity : AppCompatActivity() {
 
             //Hora regreso
             val horaRegreso = binding.spinnerHoraRegreso.selectedItem.toString()
+
+            //AsientoRegreso
+            val asientoRegreso = asientoAleatorio()
 
             //Num viajero (opcional)
 
@@ -134,9 +132,11 @@ class MainActivity : AppCompatActivity() {
                 "origen" to origen,
                 "fechaSalida" to fechaSalida,
                 "horaSalida" to horaSalida,
+                "asientoIda" to asiendoIda,
                 "destino" to destinoSeleccionado,
                 "fechaRegreso" to fechaRegreso,
-                "horaRegreso" to horaRegreso
+                "horaRegreso" to horaRegreso,
+                "asientoRegreso" to asientoRegreso
                 //Num viajero (opcional)
             )
 
@@ -171,6 +171,12 @@ class MainActivity : AppCompatActivity() {
         }, anio, mes, dia)
 
         datePickerDialog.show()
+    }
+
+    fun asientoAleatorio(): String {
+        val fila = (1..25).random()
+        val columna = ('A'..'D').random()
+        return "$fila$columna"
     }
 
     private fun validateFields(): Boolean{

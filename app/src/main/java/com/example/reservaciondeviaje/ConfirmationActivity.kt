@@ -34,13 +34,16 @@ class ConfirmationActivity : AppCompatActivity() {
             val origen = args.getString("origen", "")
             val fechaSalida = args.getString("fechaSalida", "")
             val horaSalida = args.getString("horaSalida", "")
+            val asientoIda = args.getString("asientoIda", "")
             val destino = args.getString("destino", "")
             val fechaRegreso = args.getString("fechaRegreso", "")
             val horaRegreso = args.getString("horaRegreso", "")
+            val asientoRegreso = args.getString("asientoRegreso", "")
 
             Log.d("APPLOGS", "Nombre: $nombre Apellido: $apellido Correo: $correo Origen: $origen")
             Log.d("APPLOGS", "FechaSalida: $fechaSalida HoraSalida: $horaSalida Destino: $destino")
             Log.d("APPLOGS", "FechaRegreso: $fechaRegreso HoraRegreso: $horaRegreso")
+            Log.d("APPLOGS", "AsientoIda: $asientoIda AsientoRegreso: $asientoRegreso")
 
 
         }
