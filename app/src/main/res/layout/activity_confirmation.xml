@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/tvRevisar"
-        android:layout_width="243dp"
-        android:layout_height="37dp"
+        android:layout_width="244dp"
+        android:layout_height="48dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
         android:gravity="center|center_horizontal|center_vertical"
         android:text="@string/confirmacion"

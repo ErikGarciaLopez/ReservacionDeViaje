@@ -8,34 +8,52 @@
     android:background="@color/blue_bg"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/tvViajeRedondo"
+        android:layout_width="237dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/plus_jakarta_sans_extralight"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Viaje Redondo"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <EditText
         android:id="@+id/etNombre"
-        android:layout_width="350dp"
+        android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="@drawable/dark_blue_btn_bg"
         android:ems="10"
+        android:fontFamily="@font/plus_jakarta_sans_extralight"
         android:gravity="center_vertical"
         android:hint="@string/nombre"
         android:inputType="text"
-        android:textColor="@color/gray_hint"
+        android:textColor="@color/white"
         android:textColorHint="@color/gray_hint"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.050000012" />
+        app:layout_constraintVertical_bias="0.110000014" />
 
     <EditText
         android:id="@+id/etApellido"
-        android:layout_width="350dp"
+        android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="@drawable/dark_blue_btn_bg"
         android:ems="10"
+        android:fontFamily="@font/plus_jakarta_sans_extralight"
         android:gravity="center_vertical"
         android:hint="@string/apellido"
         android:inputType="text"
-        android:textColor="@color/gray_hint"
+        android:textColor="@color/white"
         android:textColorHint="@color/gray_hint"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,14 +65,15 @@
 
     <EditText
         android:id="@+id/etCorreo"
-        android:layout_width="350dp"
+        android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="@drawable/dark_blue_btn_bg"
         android:ems="10"
+        android:fontFamily="@font/plus_jakarta_sans_extralight"
         android:gravity="center_vertical"
         android:hint="@string/correo"
         android:inputType="text"
-        android:textColor="@color/gray_hint"
+        android:textColor="@color/white"
         android:textColorHint="@color/gray_hint"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,14 +85,15 @@
 
     <EditText
         android:id="@+id/etOrigen"
-        android:layout_width="350dp"
+        android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="@drawable/dark_blue_btn_bg"
         android:ems="10"
+        android:fontFamily="@font/plus_jakarta_sans_extralight"
         android:gravity="center_vertical"
         android:hint="@string/origen"
         android:inputType="text"
-        android:textColor="@color/gray_hint"
+        android:textColor="@color/white"
         android:textColorHint="@color/gray_hint"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -86,11 +106,11 @@
 
     <Spinner
         android:id="@+id/spinnerDestino"
-        android:layout_width="350dp"
+        android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="@drawable/dark_blue_btn_bg"
         android:gravity="center_vertical"
-        android:textColor="@color/gray_hint"
+        android:textColor="@color/white"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnReservar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,26 +121,29 @@
 
     <Button
         android:id="@+id/btnFechaSalida"
-        android:layout_width="350dp"
+        android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="@drawable/dark_blue_btn_bg"
+        android:fontFamily="@font/plus_jakarta_sans_extralight"
+        android:foregroundGravity="center_vertical|center|center_horizontal"
+        android:gravity="center|center_horizontal|center_vertical"
         android:text="@string/fecha_de_salida"
-        android:textColor="@color/gray_hint"
+        android:textColor="@color/white"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etOrigen"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <Spinner
         android:id="@+id/spinnerHoraSalida"
-        android:layout_width="350dp"
+        android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="@drawable/dark_blue_btn_bg"
         android:gravity="center_vertical"
-        android:textColor="@color/gray_hint"
+        android:textColor="@color/white"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,11 +154,13 @@
 
     <Button
         android:id="@+id/btnFechaRegreso"
-        android:layout_width="350dp"
+        android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="@drawable/dark_blue_btn_bg"
+        android:fontFamily="@font/plus_jakarta_sans_extralight"
         android:text="@string/fecha_de_regreso"
-        android:textColor="@color/gray_hint"
+        android:textColor="@color/white"
+        android:textColorHint="@color/gray_hint"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -146,11 +171,11 @@
 
     <Spinner
         android:id="@+id/spinnerHoraRegreso"
-        android:layout_width="350dp"
+        android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="@drawable/dark_blue_btn_bg"
         android:gravity="center_vertical"
-        android:textColor="@color/gray_hint"
+        android:textColor="@color/white"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -161,17 +186,18 @@
 
     <EditText
         android:id="@+id/etNumViajero"
-        android:layout_width="350dp"
+        android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="@drawable/dark_blue_btn_bg"
         android:ems="10"
+        android:fontFamily="@font/plus_jakarta_sans_extralight"
         android:gravity="center_vertical"
         android:hint="@string/numero_de_viajero"
         android:inputType="number"
         android:maxLength="8"
-        android:textColor="@color/gray_hint"
+        android:textColor="@color/white"
         android:textColorHint="@color/gray_hint"
-        android:textSize="23sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
@@ -183,12 +209,126 @@
         android:id="@+id/btnReservar"
         android:layout_width="134dp"
         android:layout_height="59dp"
-        android:text="@string/reservar"
         android:enabled="false"
+        android:fontFamily="@font/plus_jakarta_sans_extralight"
+        android:text="@string/reservar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNumViajero" />
+        app:layout_constraintTop_toBottomOf="@+id/etNumViajero"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="43dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etNombre"
+        app:layout_constraintEnd_toEndOf="@+id/etNombre"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="@+id/etNombre"
+        app:layout_constraintTop_toTopOf="@+id/etNombre"
+        app:srcCompat="@drawable/name" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="43dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etApellido"
+        app:layout_constraintEnd_toEndOf="@+id/etApellido"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="@+id/etApellido"
+        app:layout_constraintTop_toTopOf="@+id/etApellido"
+        app:srcCompat="@drawable/name" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="43dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etCorreo"
+        app:layout_constraintEnd_toEndOf="@+id/etCorreo"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="@+id/etCorreo"
+        app:layout_constraintTop_toTopOf="@+id/etCorreo"
+        app:srcCompat="@drawable/correo" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="43dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etOrigen"
+        app:layout_constraintEnd_toEndOf="@+id/etOrigen"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="@+id/etOrigen"
+        app:layout_constraintTop_toTopOf="@+id/etOrigen"
+        app:srcCompat="@drawable/origensinfondo" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="43dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerDestino"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerDestino"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="@+id/spinnerDestino"
+        app:layout_constraintTop_toTopOf="@+id/spinnerDestino"
+        app:srcCompat="@drawable/destinosinfondo" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="43dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFechaSalida"
+        app:layout_constraintEnd_toEndOf="@+id/btnFechaSalida"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="@+id/btnFechaSalida"
+        app:layout_constraintTop_toTopOf="@+id/btnFechaSalida"
+        app:srcCompat="@drawable/fechasinfondo" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="43dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerHoraSalida"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerHoraSalida"
+        app:layout_constraintStart_toStartOf="@+id/spinnerHoraSalida"
+        app:layout_constraintTop_toTopOf="@+id/spinnerHoraSalida"
+        app:srcCompat="@drawable/clock" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="43dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFechaRegreso"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintEnd_toEndOf="@+id/btnFechaRegreso"
+        app:layout_constraintStart_toStartOf="@+id/btnFechaRegreso"
+        app:layout_constraintTop_toTopOf="@+id/btnFechaRegreso"
+        app:srcCompat="@drawable/fechasinfondo" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="43dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerHoraRegreso"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerHoraRegreso"
+        app:layout_constraintStart_toStartOf="@+id/spinnerHoraRegreso"
+        app:layout_constraintTop_toTopOf="@+id/spinnerHoraRegreso"
+        app:srcCompat="@drawable/clock" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="43dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etNumViajero"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintEnd_toEndOf="@+id/etNumViajero"
+        app:layout_constraintStart_toStartOf="@+id/etNumViajero"
+        app:layout_constraintTop_toTopOf="@+id/etNumViajero"
+        app:srcCompat="@drawable/frecuente" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
