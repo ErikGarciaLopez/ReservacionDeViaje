@@ -63,12 +63,6 @@ class MainActivity : AppCompatActivity() {
             mostrarDatePicker(binding.btnFechaRegreso, "regreso")
         }
 
-        //Asiento
-        // TODO: Asientos
-
-        //NUmero de viajero
-        // TODO: Num viajero
-
         //Validar que esten llenos los campos
         binding.etNombre.addTextChangedListener(object : TextWatcher{
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -124,6 +118,7 @@ class MainActivity : AppCompatActivity() {
             val asientoRegreso = asientoAleatorio()
 
             //Num viajero (opcional)
+            val numViajero = binding.etNumViajero.text.toString().toIntOrNull() ?: 0
 
             val params = bundleOf(
                 "nombre" to nombre,
@@ -136,8 +131,8 @@ class MainActivity : AppCompatActivity() {
                 "destino" to destinoSeleccionado,
                 "fechaRegreso" to fechaRegreso,
                 "horaRegreso" to horaRegreso,
-                "asientoRegreso" to asientoRegreso
-                //Num viajero (opcional)
+                "asientoRegreso" to asientoRegreso,
+                "numViajero" to numViajero
             )
 
             val intent = Intent(this, ConfirmationActivity::class.java)
