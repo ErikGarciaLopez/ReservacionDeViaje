@@ -91,9 +91,16 @@ class MainActivity : AppCompatActivity() {
             //Correo
             val correo = binding.etCorreo.text.toString()
 
-            //if (!Patterns.EMAIL_ADDRESS.matcher(correo).matches()){
-            //    Toast.makeText(this, "Correo no valido", Toast.LENGTH_SHORT).show()
-            //}
+            if (!Patterns.EMAIL_ADDRESS.matcher(correo).matches()){
+                Toast.makeText(
+                    this,
+                    "Correo no valido",
+                    Toast.LENGTH_SHORT
+                ).show()
+                binding.etCorreo.error = "Correo no valido"
+                binding.etCorreo.requestFocus()
+                return@setOnClickListener //Salir del metodo
+            }
 
             //Origen
             val origen = binding.etOrigen.text.toString()
@@ -185,5 +192,6 @@ class MainActivity : AppCompatActivity() {
                 binding.btnFechaRegreso.toString().isNotEmpty()
                 // TODO: Faltan mas validaciones
     }
+
 
 }
