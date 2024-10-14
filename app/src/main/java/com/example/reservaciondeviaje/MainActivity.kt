@@ -3,8 +3,6 @@ package com.example.reservaciondeviaje
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Patterns
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -150,9 +148,9 @@ class MainActivity : AppCompatActivity() {
         val dia = calendario.get(Calendar.DAY_OF_MONTH)
 
         //DatePicker
-        val datePickerDialog = DatePickerDialog(this, { _, anio, mes, dia ->
+        val datePickerDialog = DatePickerDialog(this, { _, selectedAnio, selectedMes, selectedDia ->
             // Aquí se maneja la fecha seleccionada
-            val fechaSeleccionada = "$dia/${mes + 1}/$anio"
+            val fechaSeleccionada = "$selectedDia/${selectedMes + 1}/$selectedAnio"
 
             if (tipoFecha == "salida"){
                 fechaSalida = fechaSeleccionada
@@ -167,7 +165,7 @@ class MainActivity : AppCompatActivity() {
         datePickerDialog.show()
     }
 
-    fun asientoAleatorio(): String {
+    private fun asientoAleatorio(): String {
         val fila = (1..25).random()
         val columna = ('A'..'D').random()
         return "$fila$columna"

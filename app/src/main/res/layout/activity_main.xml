@@ -14,7 +14,7 @@
         android:layout_height="48dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
         android:gravity="center|center_horizontal|center_vertical"
-        android:text="Viaje Redondo"
+        android:text="@string/viaje_redondo"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
