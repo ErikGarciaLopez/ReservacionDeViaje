@@ -9,4 +9,9 @@
     <string name="numero_de_viajero">Num. de viajero (opcional)</string>
     <string name="reservar">Reservar</string>
     <string name="confirmacion">Confirmacion</string>
+    <string name="correo_no_valido">Correo no valido</string>
+    <string name="falta_nombre">Falta nombre(s)</string>
+    <string name="falta_apellido">Falta apellido(s)</string>
+    <string name="falta_fecha_salida">Falta fecha salida</string>
+    <string name="falta_fecha_regreso">Falta fecha regreso</string>
 </resources>

@@ -63,42 +63,26 @@ class MainActivity : AppCompatActivity() {
             mostrarDatePicker(binding.btnFechaRegreso, "regreso")
         }
 
-        //Validar que esten llenos los campos
-        binding.etNombre.addTextChangedListener(object : TextWatcher{
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-
-            override fun afterTextChanged(p0: Editable?) {
-                //binding.btnReservar.isEnabled = binding.etNombre.text.toString().isNotEmpty()
-                binding.btnReservar.isEnabled = validateFields()
-            }
-
-        })
-
         binding.btnReservar.setOnClickListener {
 
             //Nombre
             val nombre = binding.etNombre.text.toString()
+            if (nombre.isEmpty()){
+                mostrarError(getString(R.string.falta_nombre), binding.etNombre)
+                return@setOnClickListener //Salir del metodo
+            }
 
             //Apellido
             val apellido = binding.etApellido.text.toString()
+            if (apellido.isEmpty()){
+                mostrarError(getString(R.string.falta_apellido), binding.etApellido)
+                return@setOnClickListener //Salir del metodo
+            }
 
             //Correo
             val correo = binding.etCorreo.text.toString()
-
             if (!Patterns.EMAIL_ADDRESS.matcher(correo).matches()){
-                Toast.makeText(
-                    this,
-                    "Correo no valido",
-                    Toast.LENGTH_SHORT
-                ).show()
-                binding.etCorreo.error = "Correo no valido"
-                binding.etCorreo.requestFocus()
+                mostrarError(getString(R.string.correo_no_valido), binding.etCorreo)
                 return@setOnClickListener //Salir del metodo
             }
 
@@ -106,6 +90,10 @@ class MainActivity : AppCompatActivity() {
             val origen = binding.etOrigen.text.toString()
 
             //FechaSalida: global
+            if (fechaSalida == null) {
+                Toast.makeText(this, getString(R.string.falta_fecha_salida), Toast.LENGTH_SHORT).show()
+                return@setOnClickListener //Salir del metodo
+            }
 
             //HoraSalida
             val horaSalida = binding.spinnerHoraSalida.selectedItem.toString()
@@ -117,6 +105,10 @@ class MainActivity : AppCompatActivity() {
             val destinoSeleccionado = binding.spinnerDestino.selectedItem.toString()
 
             //FechaRegreso: global
+            if (fechaRegreso == null) {
+                Toast.makeText(this, getString(R.string.falta_fecha_regreso), Toast.LENGTH_SHORT).show()
+                return@setOnClickListener //Salir del metodo
+            }
 
             //Hora regreso
             val horaRegreso = binding.spinnerHoraRegreso.selectedItem.toString()
@@ -181,16 +173,10 @@ class MainActivity : AppCompatActivity() {
         return "$fila$columna"
     }
 
-    private fun validateFields(): Boolean{
-        return binding.etNombre.text.toString().isNotEmpty() &&
-                binding.etApellido.text.toString().isNotEmpty() &&
-                binding.etCorreo.text.toString().isNotEmpty() &&
-                binding.etOrigen.text.toString().isNotEmpty() &&
-                binding.spinnerDestino.toString().isNotEmpty() &&
-                binding.btnFechaSalida.text.toString().isNotEmpty() &&
-                binding.spinnerHoraSalida.toString().isNotEmpty() &&
-                binding.btnFechaRegreso.toString().isNotEmpty()
-                // TODO: Faltan mas validaciones
+    private fun mostrarError(mensaje: String, campo: android.widget.EditText){
+        //Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show()
+        campo.error = mensaje
+        campo.requestFocus()
     }
 
 
