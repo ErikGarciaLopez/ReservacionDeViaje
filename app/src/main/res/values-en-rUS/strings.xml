@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ReservacionDeViaje</string>
+    <string name="nombre">Name(s)</string>
+    <string name="apellido">Surname(s)</string>
+    <string name="correo">Mail</string>
+    <string name="origen">Origin</string>
+    <string name="fecha_de_salida">Departure date</string>
+    <string name="fecha_de_regreso">Return date</string>
+    <string name="numero_de_viajero">Travel number</string>
+    <string name="reservar">Book</string>
+    <string name="confirmacion">Confirm</string>
+    <string name="correo_no_valido">Invalid email</string>
+    <string name="falta_nombre">Missing name</string>
+    <string name="falta_apellido">Missing surname</string>
+    <string name="falta_fecha_salida">Missing departure date</string>
+    <string name="falta_fecha_regreso">Missing return date</string>
+    <string name="viaje_redondo">Round trip</string>
+</resources>
