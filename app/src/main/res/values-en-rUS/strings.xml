@@ -16,4 +16,5 @@
     <string name="falta_fecha_salida">Missing departure date</string>
     <string name="falta_fecha_regreso">Missing return date</string>
     <string name="viaje_redondo">Round trip</string>
+    <string name="precio_con_descuento">$%.2f (%d%% discount)</string>
 </resources>

@@ -323,6 +323,48 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/precio" />
 
+    <TextView
+        android:id="@+id/tvPrecio"
+        android:layout_width="162dp"
+        android:layout_height="25dp"
+        android:fontFamily="@font/plus_jakarta_sans_extralight"
+        android:text="Precio"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.385"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAsientoRegreso2"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <TextView
+        android:id="@+id/tvPrecio2"
+        android:layout_width="217dp"
+        android:layout_height="25dp"
+        android:fontFamily="@font/plus_jakarta_sans_extralight"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrecio"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvPrecio3"
+        android:layout_width="217dp"
+        android:layout_height="25dp"
+        android:fontFamily="@font/plus_jakarta_sans_extralight"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrecio2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="visible"
+        tools:text="TextView" />
 
 
 

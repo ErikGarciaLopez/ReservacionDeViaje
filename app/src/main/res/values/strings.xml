@@ -15,4 +15,5 @@
     <string name="falta_fecha_salida">Falta fecha salida</string>
     <string name="falta_fecha_regreso">Falta fecha regreso</string>
     <string name="viaje_redondo">Viaje Redondo</string>
+    <string name="precio_con_descuento">%.2f$ (%d%% de descuento)</string>
 </resources>

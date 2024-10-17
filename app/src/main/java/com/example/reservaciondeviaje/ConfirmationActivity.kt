@@ -2,6 +2,7 @@ package com.example.reservaciondeviaje
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -46,7 +47,6 @@ class ConfirmationActivity : AppCompatActivity() {
             Log.d("APPLOGS", "FechaRegreso: $fechaRegreso HoraRegreso: $horaRegreso")
             Log.d("APPLOGS", "AsientoIda: $asientoIda AsientoRegreso: $asientoRegreso")
             Log.d("APPLOGS", "NumViajero: $numViajero")
-            Log.d("APPLOGS", "MontoFinal: $%.2f".format(calcMontoFinal(numViajero)))
 
             val nombreCompleto = "$nombre $apellido"
             binding.tvNombre.text = nombreCompleto
@@ -58,9 +58,15 @@ class ConfirmationActivity : AppCompatActivity() {
             val fechayhoraRegreso = "$fechaRegreso $horaRegreso"
             binding.tvFechaRegreso2.text = fechayhoraRegreso
             binding.tvAsientoRegreso2.text = asientoRegreso
+            val precio = calcMonto()
+            binding.tvPrecio2.text = String.format("%.2f$", precio)
 
-            //
-
+            if (numViajero != 0) {
+                binding.tvPrecio3.apply {
+                    text = context.getString(R.string.precio_con_descuento, calcDescuento(precio), 15)
+                    visibility = View.VISIBLE
+                }
+            }
 
 
 
@@ -70,12 +76,13 @@ class ConfirmationActivity : AppCompatActivity() {
 
     }
 
-    private fun calcMontoFinal (numViajero: Int): Double {
-        var precio = Random.nextInt(3000, 10001).toDouble()
-        if (numViajero != 0){
-            precio *= 0.85
-        }
+    private fun calcMonto (): Double {
+        val precio = Random.nextInt(3000, 10001).toDouble()
         return precio
+    }
+
+    private fun calcDescuento (precio: Double): Double {
+        return precio * 0.85
     }
 
 }
