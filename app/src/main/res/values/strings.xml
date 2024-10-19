@@ -18,4 +18,7 @@
     <string name="viaje_redondo">Viaje Redondo</string>
     <string name="precio_con_descuento">%.2f$ (%d%% de descuento)</string>
     <string name="origen_diferente_destino">Origen y Destino deben ser diferentes</string>
+    <string name="fecha_salida_pasada">No puedes seleccionar una fecha pasada para la salida</string>
+    <string name="seleccionar_fecha_salida_primero">Selecciona primero la fecha de salida</string>
+    <string name="fecha_regreso_invalida">Fecha de regreso debe ser posterior a la fecha de salida</string>
 </resources>

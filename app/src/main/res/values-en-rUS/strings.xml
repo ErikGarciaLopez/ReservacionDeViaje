@@ -19,4 +19,7 @@
     <string name="precio_con_descuento">$%.2f (%d%% discount)</string>
     <string name="destino">Destination</string>
     <string name="origen_diferente_destino">Origin and Destination must be different</string>
+    <string name="fecha_salida_pasada">You cannot select a past date for departure</string>
+    <string name="seleccionar_fecha_salida_primero">Select the departure date first</string>
+    <string name="fecha_regreso_invalida">Return date must be later than departure date</string>
 </resources>

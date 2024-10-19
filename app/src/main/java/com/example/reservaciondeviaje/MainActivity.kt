@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private var fechaSalida: String? = null   //Variable global para fechaSalida
-    private var fechaRegreso: String? = null  //Variable global para fechaRegreso
+    private var fechaSalida: Calendar? = null   //Variable global para fechaSalida
+    private var fechaRegreso: Calendar? = null  //Variable global para fechaRegreso
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -134,11 +134,11 @@ class MainActivity : AppCompatActivity() {
                 "apellido" to apellido,
                 "correo" to correo,
                 "origen" to origen,
-                "fechaSalida" to fechaSalida,
+                "fechaSalida" to formatFecha(fechaSalida!!),
                 "horaSalida" to horaSalida,
                 "asientoIda" to asiendoIda,
                 "destino" to destinoSeleccionado,
-                "fechaRegreso" to fechaRegreso,
+                "fechaRegreso" to formatFecha(fechaRegreso!!),
                 "horaRegreso" to horaRegreso,
                 "asientoRegreso" to asientoRegreso,
                 "numViajero" to numViajero
@@ -153,28 +153,54 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun mostrarDatePicker(button: Button, tipoFecha: String) {
-        //Fecha actual
         val calendario = Calendar.getInstance()
         val anio = calendario.get(Calendar.YEAR)
         val mes = calendario.get(Calendar.MONTH)
         val dia = calendario.get(Calendar.DAY_OF_MONTH)
 
-        //DatePicker
         val datePickerDialog = DatePickerDialog(this, { _, selectedAnio, selectedMes, selectedDia ->
-            // Aquí se maneja la fecha seleccionada
-            val fechaSeleccionada = "$selectedDia/${selectedMes + 1}/$selectedAnio"
-
-            if (tipoFecha == "salida"){
-                fechaSalida = fechaSeleccionada
-                button.text = fechaSalida  // Mostrar la fecha en el botón
-            } else if (tipoFecha == "regreso"){
-                fechaRegreso = fechaSeleccionada
-                button.text = fechaRegreso  // Mostrar la fecha en el botón
+            val fechaSeleccionada = Calendar.getInstance().apply {
+                set(selectedAnio, selectedMes, selectedDia)
             }
 
+            when (tipoFecha) {
+                "salida" -> {
+                    if (fechaSeleccionada.before(Calendar.getInstance())) {
+                        Toast.makeText(this, getString(R.string.fecha_salida_pasada), Toast.LENGTH_SHORT).show()
+                    } else {
+                        fechaSalida = fechaSeleccionada
+                        button.text = formatFecha(fechaSeleccionada)
+                        // Resetear la fecha de regreso si es anterior a la nueva fecha de salida
+                        if (fechaRegreso != null && fechaRegreso!!.before(fechaSalida)) {
+                            fechaRegreso = null
+                            binding.btnFechaRegreso.text = getString(R.string.fecha_de_regreso)
+                        }
+                    }
+                }
+                "regreso" -> {
+                    if (fechaSalida == null) {
+                        Toast.makeText(this, getString(R.string.seleccionar_fecha_salida_primero), Toast.LENGTH_SHORT).show()
+                    } else if (fechaSeleccionada.before(fechaSalida) || fechaSeleccionada == fechaSalida) {
+                        Toast.makeText(this, getString(R.string.fecha_regreso_invalida), Toast.LENGTH_SHORT).show()
+                    } else {
+                        fechaRegreso = fechaSeleccionada
+                        button.text = formatFecha(fechaSeleccionada)
+                    }
+                }
+            }
         }, anio, mes, dia)
 
+        if (tipoFecha == "regreso" && fechaSalida != null) {
+            datePickerDialog.datePicker.minDate = fechaSalida!!.timeInMillis + 86400000 // +1 día en milisegundos
+        } else {
+            datePickerDialog.datePicker.minDate = System.currentTimeMillis() - 1000
+        }
+
         datePickerDialog.show()
+    }
+
+    private fun formatFecha(fecha: Calendar): String {
+        return "${fecha.get(Calendar.DAY_OF_MONTH)}/${fecha.get(Calendar.MONTH) + 1}/${fecha.get(Calendar.YEAR)}"
     }
 
     private fun asientoAleatorio(): String {
