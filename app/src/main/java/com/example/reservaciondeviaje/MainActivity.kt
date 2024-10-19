@@ -127,7 +127,14 @@ class MainActivity : AppCompatActivity() {
             val asientoRegreso = asientoAleatorio()
 
             //Num viajero (opcional)
-            val numViajero = binding.etNumViajero.text.toString().toIntOrNull() ?: 0
+            val numViajeroTexto = binding.etNumViajero.text.toString()
+
+            // Validación de longitud
+            if (numViajeroTexto.isNotEmpty() && numViajeroTexto.length != 8) {
+                mostrarError(getString(R.string.error_num_viajero), binding.etNumViajero)
+                return@setOnClickListener
+            }
+            val numViajero = numViajeroTexto.toIntOrNull() ?: 0
 
             val params = bundleOf(
                 "nombre" to nombre,
