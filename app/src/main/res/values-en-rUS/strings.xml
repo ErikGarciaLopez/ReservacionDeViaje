@@ -9,7 +9,7 @@
     <string name="fecha_de_regreso">Return date</string>
     <string name="numero_de_viajero">Travel number</string>
     <string name="reservar">Book</string>
-    <string name="confirmacion">Confirm</string>
+    <string name="confirmacion">Confirmation</string>
     <string name="correo_no_valido">Invalid email</string>
     <string name="falta_nombre">Missing name</string>
     <string name="falta_apellido">Missing surname</string>
@@ -22,4 +22,10 @@
     <string name="fecha_salida_pasada">You cannot select a past date for departure</string>
     <string name="seleccionar_fecha_salida_primero">Select the departure date first</string>
     <string name="fecha_regreso_invalida">Return date must be later than departure date</string>
+    <string name="nombre_completo">Full name</string>
+    <string name="fecha_y_hora_ida">Date and time (Departure)</string>
+    <string name="asiento_ida">Seat (Departure)</string>
+    <string name="fecha_y_hora_regreso">Date and time (Return)</string>
+    <string name="asiento_regreso">Seat (Return)</string>
+    <string name="precio">Precio</string>
 </resources>

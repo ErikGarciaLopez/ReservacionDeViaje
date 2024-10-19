@@ -1,371 +1,304 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue_bg"
+    android:padding="16dp"
     tools:context=".ConfirmationActivity">
 
     <TextView
         android:id="@+id/tvRevisar"
-        android:layout_width="244dp"
-        android:layout_height="48dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:gravity="center|center_horizontal|center_vertical"
+        android:gravity="center"
         android:text="@string/confirmacion"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.01999998" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/ivPersona"
-        android:layout_width="60dp"
-        android:layout_height="55dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.122"
+        app:layout_constraintTop_toBottomOf="@+id/tvRevisar"
         app:srcCompat="@drawable/persona" />
 
     <TextView
         android:id="@+id/tvNombreCompleto"
-        android:layout_width="162dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="Nombre completo"
+        android:text="@string/nombre_completo"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toEndOf="@+id/ivPersona"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.110000014" />
+        app:layout_constraintTop_toTopOf="@+id/ivPersona" />
 
     <TextView
         android:id="@+id/tvNombre"
-        android:layout_width="219dp"
-        android:layout_height="27dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="textView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvNombreCompleto"
         app:layout_constraintTop_toBottomOf="@+id/tvNombreCompleto"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:text="John Doe" />
 
     <ImageView
         android:id="@+id/ivOrigen"
-        android:layout_width="60dp"
-        android:layout_height="55dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPersona"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombre"
         app:srcCompat="@drawable/origen" />
 
     <TextView
         android:id="@+id/tvOrigen"
-        android:layout_width="162dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="Origen"
+        android:text="@string/origen"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toEndOf="@+id/ivOrigen"
-        app:layout_constraintTop_toBottomOf="@+id/tvNombre"
-        app:layout_constraintVertical_bias="0.04000002" />
+        app:layout_constraintTop_toTopOf="@+id/ivOrigen" />
 
     <TextView
         android:id="@+id/tvOrigen2"
-        android:layout_width="219dp"
-        android:layout_height="27dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvOrigen"
         app:layout_constraintTop_toBottomOf="@+id/tvOrigen"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:text="Ciudad de origen" />
 
     <ImageView
         android:id="@+id/ivFechaIda"
-        android:layout_width="60dp"
-        android:layout_height="55dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivOrigen"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/tvOrigen2"
         app:srcCompat="@drawable/calendario" />
 
     <TextView
         android:id="@+id/tvFechaIda"
-        android:layout_width="162dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="Fecha y hora"
+        android:text="@string/fecha_y_hora_ida"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvOrigen2"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintStart_toEndOf="@+id/ivFechaIda"
+        app:layout_constraintTop_toTopOf="@+id/ivFechaIda" />
 
     <TextView
         android:id="@+id/tvFechaIda2"
-        android:layout_width="217dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvFechaIda"
         app:layout_constraintTop_toBottomOf="@+id/tvFechaIda"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:text="01/01/2023 12:00" />
 
     <ImageView
         android:id="@+id/ivAsientoIda"
-        android:layout_width="60dp"
-        android:layout_height="55dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivFechaIda"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaIda2"
         app:srcCompat="@drawable/asiento" />
 
     <TextView
         android:id="@+id/tvAsientoIda"
-        android:layout_width="162dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="Asiento ida"
+        android:text="@string/asiento_ida"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvFechaIda2"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintStart_toEndOf="@+id/ivAsientoIda"
+        app:layout_constraintTop_toTopOf="@+id/ivAsientoIda" />
 
     <TextView
         android:id="@+id/tvAsientoIda2"
-        android:layout_width="217dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvAsientoIda"
         app:layout_constraintTop_toBottomOf="@+id/tvAsientoIda"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:text="A1" />
 
     <ImageView
         android:id="@+id/ivDestino"
-        android:layout_width="60dp"
-        android:layout_height="55dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivAsientoIda"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/tvAsientoIda2"
         app:srcCompat="@drawable/destino" />
 
     <TextView
         android:id="@+id/tvDestino"
-        android:layout_width="162dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="Destino"
+        android:text="@string/destino"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAsientoIda2"
-        app:layout_constraintVertical_bias="0.058" />
+        app:layout_constraintStart_toEndOf="@+id/ivDestino"
+        app:layout_constraintTop_toTopOf="@+id/ivDestino" />
 
     <TextView
         android:id="@+id/tvDestino2"
-        android:layout_width="217dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvDestino"
         app:layout_constraintTop_toBottomOf="@+id/tvDestino"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:text="Ciudad de destino" />
 
     <ImageView
         android:id="@+id/ivFechaRegreso"
-        android:layout_width="60dp"
-        android:layout_height="55dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivDestino"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/tvDestino2"
         app:srcCompat="@drawable/calendario" />
 
     <TextView
         android:id="@+id/tvFechaRegreso"
-        android:layout_width="162dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="Fecha y hora"
+        android:text="@string/fecha_y_hora_regreso"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDestino2"
-        app:layout_constraintVertical_bias="0.096" />
+        app:layout_constraintStart_toEndOf="@+id/ivFechaRegreso"
+        app:layout_constraintTop_toTopOf="@+id/ivFechaRegreso" />
 
     <TextView
         android:id="@+id/tvFechaRegreso2"
-        android:layout_width="217dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="textView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvFechaRegreso"
         app:layout_constraintTop_toBottomOf="@+id/tvFechaRegreso"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:text="15/01/2023 18:00" />
 
     <ImageView
         android:id="@+id/ivAsientoRegreso"
-        android:layout_width="60dp"
-        android:layout_height="55dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivFechaRegreso"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaRegreso2"
         app:srcCompat="@drawable/asiento" />
 
     <TextView
         android:id="@+id/tvAsientoRegreso"
-        android:layout_width="162dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="Asiento Regreso"
+        android:text="@string/asiento_regreso"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvFechaRegreso2"
-        app:layout_constraintVertical_bias="0.066" />
+        app:layout_constraintStart_toEndOf="@+id/ivAsientoRegreso"
+        app:layout_constraintTop_toTopOf="@+id/ivAsientoRegreso" />
 
     <TextView
         android:id="@+id/tvAsientoRegreso2"
-        android:layout_width="217dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.561"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvAsientoRegreso"
         app:layout_constraintTop_toBottomOf="@+id/tvAsientoRegreso"
-        app:layout_constraintVertical_bias="0.023" />
+        tools:text="B2" />
 
     <ImageView
         android:id="@+id/ivPrecio"
-        android:layout_width="60dp"
-        android:layout_height="55dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivAsientoRegreso"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/tvAsientoRegreso2"
         app:srcCompat="@drawable/precio" />
 
     <TextView
         android:id="@+id/tvPrecio"
-        android:layout_width="162dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="Precio"
+        android:text="@string/precio"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAsientoRegreso2"
-        app:layout_constraintVertical_bias="0.111" />
+        app:layout_constraintStart_toEndOf="@+id/ivPrecio"
+        app:layout_constraintTop_toTopOf="@+id/ivPrecio" />
 
     <TextView
         android:id="@+id/tvPrecio2"
-        android:layout_width="217dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvPrecio"
         app:layout_constraintTop_toBottomOf="@+id/tvPrecio"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:text="$500.00" />
 
     <TextView
         android:id="@+id/tvPrecio3"
-        android:layout_width="217dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/plus_jakarta_sans_extralight"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvPrecio2"
         app:layout_constraintTop_toBottomOf="@+id/tvPrecio2"
-        app:layout_constraintVertical_bias="0.0"
-        tools:visibility="visible"
-        tools:text="TextView" />
-
-
+        tools:text="Precio adicional"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

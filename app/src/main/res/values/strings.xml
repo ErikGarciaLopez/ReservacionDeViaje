@@ -21,4 +21,10 @@
     <string name="fecha_salida_pasada">No puedes seleccionar una fecha pasada para la salida</string>
     <string name="seleccionar_fecha_salida_primero">Selecciona primero la fecha de salida</string>
     <string name="fecha_regreso_invalida">Fecha de regreso debe ser posterior a la fecha de salida</string>
+    <string name="nombre_completo">Nombre completo</string>
+    <string name="fecha_y_hora_ida">Fecha y hora(Ida)</string>
+    <string name="asiento_ida">Asiento ida</string>
+    <string name="fecha_y_hora_regreso">Fecha y hora(Regreso)</string>
+    <string name="asiento_regreso">Asiento Regreso</string>
+    <string name="precio">Precio</string>
 </resources>
