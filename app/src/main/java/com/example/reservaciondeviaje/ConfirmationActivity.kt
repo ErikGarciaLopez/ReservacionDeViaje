@@ -42,11 +42,13 @@ class ConfirmationActivity : AppCompatActivity() {
             val asientoRegreso = args.getString("asientoRegreso", "")
             val numViajero = args.getInt("numViajero", 0)
 
+            /*
             Log.d("APPLOGS", "Nombre: $nombre Apellido: $apellido Correo: $correo Origen: $origen")
             Log.d("APPLOGS", "FechaSalida: $fechaSalida HoraSalida: $horaSalida Destino: $destino")
             Log.d("APPLOGS", "FechaRegreso: $fechaRegreso HoraRegreso: $horaRegreso")
             Log.d("APPLOGS", "AsientoIda: $asientoIda AsientoRegreso: $asientoRegreso")
             Log.d("APPLOGS", "NumViajero: $numViajero")
+             */
 
             val nombreCompleto = "$nombre $apellido"
             binding.tvNombre.text = nombreCompleto
@@ -67,10 +69,6 @@ class ConfirmationActivity : AppCompatActivity() {
                     visibility = View.VISIBLE
                 }
             }
-
-
-
-
         }
 
 

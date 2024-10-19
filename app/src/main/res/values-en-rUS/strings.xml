@@ -23,9 +23,7 @@
     <string name="seleccionar_fecha_salida_primero">Select the departure date first</string>
     <string name="fecha_regreso_invalida">Return date must be later than departure date</string>
     <string name="nombre_completo">Full name</string>
-    <string name="fecha_y_hora_ida">Date and time (Departure)</string>
-    <string name="asiento_ida">Seat (Departure)</string>
-    <string name="fecha_y_hora_regreso">Date and time (Return)</string>
-    <string name="asiento_regreso">Seat (Return)</string>
+    <string name="fecha_y_hora">Fecha y hora</string>
     <string name="precio">Precio</string>
+    <string name="asiento">Asiento</string>
 </resources>
