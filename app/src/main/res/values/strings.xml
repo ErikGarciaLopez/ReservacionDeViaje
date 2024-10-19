@@ -4,6 +4,7 @@
     <string name="apellido">Apellido(s)</string>
     <string name="correo">Correo</string>
     <string name="origen">Origen</string>
+    <string name="destino">Destino</string>
     <string name="fecha_de_salida">Fecha de Salida</string>
     <string name="fecha_de_regreso">Fecha de Regreso</string>
     <string name="numero_de_viajero">Num. de viajero (opcional)</string>

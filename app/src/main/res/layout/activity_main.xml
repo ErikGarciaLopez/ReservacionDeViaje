@@ -101,7 +101,7 @@
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCorreo"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintVertical_bias="0.050000012" />
 
 
     <Spinner
@@ -117,7 +117,7 @@
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerHoraSalida"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintVertical_bias="0.07999998" />
 
     <Button
         android:id="@+id/btnFechaSalida"
@@ -339,7 +339,31 @@
         app:layout_constraintTop_toTopOf="@+id/etNumViajero"
         app:srcCompat="@drawable/frecuente" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/plus_jakarta_sans_extralight"
+        android:text="@string/origen"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/etOrigen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCorreo" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/plus_jakarta_sans_extralight"
+        android:text="@string/destino"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerDestino"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerHoraSalida" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
