@@ -18,4 +18,5 @@
     <string name="viaje_redondo">Round trip</string>
     <string name="precio_con_descuento">$%.2f (%d%% discount)</string>
     <string name="destino">Destination</string>
+    <string name="origen_diferente_destino">Origin and Destination must be different</string>
 </resources>

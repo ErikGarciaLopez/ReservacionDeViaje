@@ -34,11 +34,17 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        //Spinner Destinos
-        val destinos = arrayOf("Cancún", "Ciudad de México", "Guadalajara", "Monterrey", "Los Cabos", "Tijuana")
-        val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, destinos)
-        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.spinnerDestino.adapter = spinnerAdapter
+        val ciudades = arrayOf("Cancún", "Ciudad de México", "Guadalajara", "Monterrey", "Los Cabos", "Tijuana")
+
+        // Spinner Origen
+        val spinnerOrigenAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, ciudades)
+        spinnerOrigenAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.spinnerOrigen.adapter = spinnerOrigenAdapter
+
+        // Spinner Destinos
+        val spinnerDestinoAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, ciudades)
+        spinnerDestinoAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.spinnerDestino.adapter = spinnerDestinoAdapter
 
         //Fecha Salida
         binding.btnFechaSalida.setOnClickListener {
@@ -47,14 +53,14 @@ class MainActivity : AppCompatActivity() {
 
         //Spinner HoraSalida
         val horarios = arrayOf("7:00 a.m.", "10:00 a.m.", "2:00 p.m.", "6:00 p.m.")
-        val spinnerAdapter2 = ArrayAdapter(this, android.R.layout.simple_spinner_item, horarios)
-        spinnerAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.spinnerHoraSalida.adapter = spinnerAdapter2
+        val spinnerHoraSalidaAdapter  = ArrayAdapter(this, android.R.layout.simple_spinner_item, horarios)
+        spinnerHoraSalidaAdapter .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.spinnerHoraSalida.adapter = spinnerHoraSalidaAdapter
 
         //Spiner HoraRegreso
-        val spinnerAdapter3 = ArrayAdapter(this, android.R.layout.simple_spinner_item, horarios)
-        spinnerAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.spinnerHoraRegreso.adapter = spinnerAdapter3
+        val spinnerHoraRegresoAdapter  = ArrayAdapter(this, android.R.layout.simple_spinner_item, horarios)
+        spinnerHoraRegresoAdapter .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.spinnerHoraRegreso.adapter = spinnerHoraRegresoAdapter
 
         //Fecha Regreso
         binding.btnFechaRegreso.setOnClickListener {
@@ -85,7 +91,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             //Origen
-            val origen = binding.etOrigen.text.toString()
+            val origen = binding.spinnerOrigen.selectedItem.toString()
 
             //FechaSalida: global
             if (fechaSalida == null) {
@@ -101,6 +107,12 @@ class MainActivity : AppCompatActivity() {
 
             // Destino
             val destinoSeleccionado = binding.spinnerDestino.selectedItem.toString()
+
+            //Origen!=Destino
+            if (origen == destinoSeleccionado) {
+                Toast.makeText(this, getString(R.string.origen_diferente_destino), Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
             //FechaRegreso: global
             if (fechaRegreso == null) {

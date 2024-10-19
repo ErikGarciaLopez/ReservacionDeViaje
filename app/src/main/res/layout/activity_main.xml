@@ -83,18 +83,13 @@
         app:layout_constraintTop_toBottomOf="@+id/etApellido"
         app:layout_constraintVertical_bias="0.027" />
 
-    <EditText
-        android:id="@+id/etOrigen"
+    <Spinner
+        android:id="@+id/spinnerOrigen"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="@drawable/dark_blue_btn_bg"
-        android:ems="10"
-        android:fontFamily="@font/plus_jakarta_sans_extralight"
         android:gravity="center_vertical"
-        android:hint="@string/origen"
-        android:inputType="text"
         android:textColor="@color/white"
-        android:textColorHint="@color/gray_hint"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -139,7 +134,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etOrigen"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerOrigen"
         app:layout_constraintVertical_bias="0.023" />
 
 
@@ -266,11 +261,11 @@
         android:id="@+id/imageView5"
         android:layout_width="43dp"
         android:layout_height="27dp"
-        app:layout_constraintBottom_toBottomOf="@+id/etOrigen"
-        app:layout_constraintEnd_toEndOf="@+id/etOrigen"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerOrigen"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerOrigen"
         app:layout_constraintHorizontal_bias="0.96"
-        app:layout_constraintStart_toStartOf="@+id/etOrigen"
-        app:layout_constraintTop_toTopOf="@+id/etOrigen"
+        app:layout_constraintStart_toStartOf="@+id/spinnerOrigen"
+        app:layout_constraintTop_toTopOf="@+id/spinnerOrigen"
         app:srcCompat="@drawable/origensinfondo" />
 
     <ImageView
@@ -346,7 +341,7 @@
         android:fontFamily="@font/plus_jakarta_sans_extralight"
         android:text="@string/origen"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/etOrigen"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerOrigen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
