@@ -10,7 +10,7 @@ This is a simple Kotlin app for travel reservation (simulation)
 <img src="images/img2.jpeg" width="200">
 
 ### Second screen
-<img src="images/img3.jpeg" width="300">
+<img src="images/img3.jpeg" width="200">
 
 ### Some validations
 <img src="images/img4.png" width="300">
